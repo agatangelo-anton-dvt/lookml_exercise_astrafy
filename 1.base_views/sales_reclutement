@@ -1,1 +1,25 @@
+view: sales_reclutement {
+  sql_table_name: `raw_data.sales_reclutement` ;;
 
+  dimension: sale_id {
+    primary_key: yes
+    hidden: yes
+    type: string
+    sql: ${TABLE}.sale_id ;;
+  }
+
+  dimension: order_id {
+    type: string
+    hidden: yes
+    sql: ${TABLE}.order_id ;;
+  }
+
+  dimension: product_id {
+    type: string
+    sql: ${TABLE}.product_id ;;
+  }
+
+  dimension: quantity {
+    type: number
+    sql: ${TABLE}.quantity ;;
+  }
