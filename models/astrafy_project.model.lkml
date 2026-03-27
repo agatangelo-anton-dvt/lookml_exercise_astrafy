@@ -4,7 +4,7 @@ connection: "astrafy-conexion"
 include: "/views/**/*.view.lkml"
 
 datagroup: astrafy_project_default_datagroup {
-  sql_trigger: SELECT MAX(order_id) FROM raw_data.orders_reclutement;;
+  sql_trigger: SELECT MAX(orders_id) FROM raw_data.orders_reclutement;;
   max_cache_age: "1 hour"
 }
 
