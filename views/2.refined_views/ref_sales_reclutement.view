@@ -1,0 +1,10 @@
+include: "/views/1.base_views/sales_reclutement.view.lkml"
+
+view: +sales_reclutement {
+
+  measure: total_qty {
+    type: sum
+    sql: ${qty} ;;
+    description: "Total sum of quantity"
+  }
+   }
