@@ -5,31 +5,32 @@ dimension: order_id {
     primary_key: yes
     type: string
     sql: ${TABLE}.order_id ;;
+    description: "Unique ID of the order"
   }
 
   dimension: customer_id_ {
     type: string
     sql: ${TABLE}.customer_id_ ;;
-    description: "ID del cliente"
+    description: "Unique ID of the customer"
   }
 
   dimension: products_id {
     type: string
     sql: ${TABLE}.products_id ;;
-    description: "ID del producto vendido"
+    description: "ID of sold product"
   }
 
   dimension: net_sales {
     type: number
     sql: ${TABLE}.net_sales ;;
     value_format_name: eur
-    description: "Venta neta de esta línea de producto"
+    description: "Net sales of this product line"
   }
 
   dimension: qty {
     type: number
     sql: ${TABLE}.qty ;;
-    description: "Cantidad de unidades vendidas de este producto"
+    description: "Number of units sold of this product"
   }
 
   dimension_group: date {
