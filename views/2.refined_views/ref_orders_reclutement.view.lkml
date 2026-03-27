@@ -1,6 +1,6 @@
-include: "/views/1.base_views/order_reclutement.view.lkml"
+include: "/views/1.base_views/orders_reclutement.view.lkml"
 
-view: +order_reclutement {
+view: +orders_reclutement {
 
   measure: count_orders {
     type: count_distinct
