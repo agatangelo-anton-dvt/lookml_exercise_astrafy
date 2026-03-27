@@ -4,7 +4,7 @@ connection: "astrafy-conexion"
 include: "/views/**/*.view.lkml"
 
 datagroup: astrafy_project_default_datagroup {
-  sql_trigger: SELECT MAX(order_id) FROM orders_reclutement;;
+  sql_trigger: SELECT MAX(order_id) FROM raw_data.orders_reclutement;;
   max_cache_age: "1 hour"
 }
 
@@ -17,13 +17,13 @@ explore: orders {
   join: sales {
     type: left_outer
     relationship: one_to_many
-    sql_on: ${orders.order_id} = ${sales.order_id} ;;
+    sql_on: ${orders_reclutement.order_id} = ${sales_reclutement.order_id} ;;
   }
 
   # Join segmentation (1 order -> 1 segment)
   join: order_segmentation {
     type: left_outer
     relationship: one_to_one
-    sql_on: ${orders.order_id} = ${order_segmentation.order_id} ;;
+    sql_on: ${orders_reclutement.order_id} = ${order_segmentation.order_id} ;;
   }
 }
