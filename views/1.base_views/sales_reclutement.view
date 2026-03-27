@@ -1,0 +1,39 @@
+view: sales_reclutement {
+  sql_table_name: `raw_data.sales_reclutement` ;;
+
+dimension: order_id {
+    primary_key: yes
+    type: string
+    sql: ${TABLE}.order_id ;;
+  }
+
+  dimension: customer_id_ {
+    type: string
+    sql: ${TABLE}.customer_id_ ;;
+    description: "ID del cliente"
+  }
+
+  dimension: products_id {
+    type: string
+    sql: ${TABLE}.products_id ;;
+    description: "ID del producto vendido"
+  }
+
+  dimension: net_sales {
+    type: number
+    sql: ${TABLE}.net_sales ;;
+    value_format_name: eur
+    description: "Venta neta de esta línea de producto"
+  }
+
+  dimension: qty {
+    type: number
+    sql: ${TABLE}.qty ;;
+    description: "Cantidad de unidades vendidas de este producto"
+  }
+
+  dimension_group: date {
+    type: time
+    timeframes: [raw, date, month, year]
+    sql: ${TABLE}.date_date ;;
+  }
