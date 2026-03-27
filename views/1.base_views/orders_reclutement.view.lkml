@@ -1,3 +1,6 @@
+view: sales_reclutement {
+  sql_table_name: `raw_data.sales_reclutement` ;;
+
 dimension: orders_id {
     primary_key: yes
     type: string
