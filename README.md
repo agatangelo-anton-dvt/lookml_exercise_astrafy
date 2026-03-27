@@ -29,8 +29,3 @@ A SQL Derived Table (PDT) categorizes each order from 2023 based on the customer
 - **Connection:** Requires a functional Looker connection named `astrafy-conexion`.
 - **Database:** Designed for Google BigQuery, referencing the `raw_data` dataset.
 - **Caching:** Data is refreshed via a datagroup with a 1-hour maximum cache age.
-
-## How to Use
-1. Navigate to the **Business Orders & Sales Analysis** Explore.
-2. Use the **Order Segment (2023)** dimension to filter or pivot sales data by customer loyalty levels.
-3. Combine dimensions from `Orders` and `Sales` to analyze product performance across different customer segments.
