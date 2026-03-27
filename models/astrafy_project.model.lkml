@@ -10,13 +10,13 @@ datagroup: astrafy_project_default_datagroup {
 
 persist_with: astrafy_project_default_datagroup
 
-explore: orders_reclutement {
+explore: sales_reclutement {
   label: "Business Orders & Sales Analysis"
 
-  # Join Sales (1 order -> N lines of sales)
-  join: sales_reclutement {
+  # Join Orders (1 order -> N lines of sales)
+  join: orders_reclutement {
     type: left_outer
-    relationship: one_to_many
+    relationship: many_to_one
     sql_on: ${orders_reclutement.orders_id} = ${sales_reclutement.order_id} ;;
   }
 
