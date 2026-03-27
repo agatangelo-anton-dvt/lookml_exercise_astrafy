@@ -6,9 +6,9 @@ view: order_segmentation {
               orders_id,
               customers_id,
               date_date,
-              count(orders_id) OVER (
+              COUNT(orders_id) OVER (
                   PARTITION BY customers_id 
-                  ORDER BY unix_date(date_date) 
+                  ORDER BY UNIX_DATE(date_date) 
                   RANGE BETWEEN 365 PRECEDING AND 1 PRECEDING
               ) as orders_last_12_months
           FROM `raw_data.orders_reclutement`
