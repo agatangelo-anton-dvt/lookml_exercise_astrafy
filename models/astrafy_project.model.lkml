@@ -17,13 +17,13 @@ explore: orders {
   join: sales {
     type: left_outer
     relationship: one_to_many
-    sql_on: ${orders_reclutement.order_id} = ${sales_reclutement.order_id} ;;
+    sql_on: ${orders_reclutement.orders_id} = ${sales_reclutement.order_id} ;;
   }
 
   # Join segmentation (1 order -> 1 segment)
   join: order_segmentation {
     type: left_outer
     relationship: one_to_one
-    sql_on: ${orders_reclutement.order_id} = ${order_segmentation.order_id} ;;
+    sql_on: ${orders_reclutement.orders_id} = ${order_segmentation.orders_id} ;;
   }
 }
