@@ -1,5 +1,6 @@
 view: order_segmentation {
   derived_table: {
+  datagroup_trigger: astrafy_project_default_datagroup
     sql: 
       WITH history AS (
           SELECT
