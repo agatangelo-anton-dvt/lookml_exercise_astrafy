@@ -7,4 +7,10 @@ view: +order_reclutement {
     sql: ${orders_id} ;;
     description: "Count distinct of orders"
   }
+
+  measure: sum_net_sales {
+    type: sum
+    sql: ${net_sales} ;;
+    description: "Sum of net sales"
+  }
    }
