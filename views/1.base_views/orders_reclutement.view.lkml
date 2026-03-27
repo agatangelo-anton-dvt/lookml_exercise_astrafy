@@ -1,5 +1,5 @@
-view: sales_reclutement {
-  sql_table_name: `raw_data.sales_reclutement` ;;
+view: orders_reclutement {
+  sql_table_name: `raw_data.orders_reclutement` ;;
 
 dimension: orders_id {
     primary_key: yes
