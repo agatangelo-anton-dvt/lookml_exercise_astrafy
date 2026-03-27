@@ -5,5 +5,6 @@ view: +order_reclutement {
   measure: count_orders {
     type: count_distinct
     sql: ${orders_id} ;;
+    description: "Count distinct of orders"
   }
    }
